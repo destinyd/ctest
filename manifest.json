@@ -1,0 +1,17 @@
+{
+"name": "神马价消费记录",
+"version": "1.0",
+"description": "将消费记录到《神马价》网站，并且可以按时间分段查询自己消费情况，还能查询到周边的消费情况.",
+"browser_action": {
+  "default_icon": "icon.jpg",
+  "popup":"popup.html",
+  "content_scripts": [
+    {
+      "matches": ["http://shenmajia.com/*"],
+      "css": ["assets/application.css"],
+      "js": ["assets/application.js"]
+    }
+  ]
+},
+"permissions": ["http://*/*"]
+}
